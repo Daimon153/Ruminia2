@@ -106,7 +106,10 @@ private void CityCombobox_SelectionChanged(object sender, SelectionChangedEventA
             
             codeName = codeName + ack.ToString();
             }
-           
+            double result = Char.GetNumericValue(codeName[0])*2+ Char.GetNumericValue(codeName[1])*7 + Char.GetNumericValue(codeName[2]) * 9 + Char.GetNumericValue(codeName[3]) * 1 + Char.GetNumericValue(codeName[4]) * 4 + Char.GetNumericValue(codeName[5]) * 6 + Char.GetNumericValue(codeName[6]) * 3 + Char.GetNumericValue(codeName[7]) * 5 + Char.GetNumericValue(codeName[8]) * 8 + Char.GetNumericValue(codeName[9]) * 2 + Char.GetNumericValue(codeName[10]) * 7 + Char.GetNumericValue(codeName[11]) * 9;
+            int resultend = Convert.ToInt32(result) / 11;
+
+            codeName = codeName + resultend.ToString().Substring(0,1);
             MessageBox.Show(codeName);
         }
 
