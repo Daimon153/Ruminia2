@@ -57,6 +57,19 @@ namespace Ruminia
             {
                 codeName = codeName + "3";
             }
+            if (DateBirthDatePicker.SelectedDate.Value.Year > 1850 && DateBirthDatePicker.SelectedDate.Value.Year < 1899)
+            {
+                codeName = codeName + "4";
+            }
+            if (DateBirthDatePicker.SelectedDate.Value.Year > 200 && DateBirthDatePicker.SelectedDate.Value.Year < 2049)
+            {
+                codeName = codeName + "5";
+            }
+            if (DateBirthDatePicker.SelectedDate.Value.Year > 2050 && DateBirthDatePicker.SelectedDate.Value.Year < 2099)
+            {
+                codeName = codeName + "6";
+            }
+
         }
     }
 }
