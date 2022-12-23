@@ -26,12 +26,20 @@ namespace Ruminia
             InitializeComponent();
             DateBirthDatePicker.SelectedDate = DateTime.Now;
             string[] readText = File.ReadAllLines("Roman.csv");
+            List<string> data= new List<string>();
 
             foreach (string item in readText)
             {
-                string country=item.Split(';')[2];
+                data.Add(item);
+                
+               
+            }
+            foreach (var item in data)
+            {
+            string country=item.Split(';')[2];
                 CityCombobox.Items.Add(country);
             }
+             
         }
 
         private void GenerationButton_Click(object sender, RoutedEventArgs e)
