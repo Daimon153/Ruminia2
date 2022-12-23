@@ -44,7 +44,19 @@ namespace Ruminia
 
         private void GenerationButton_Click(object sender, RoutedEventArgs e)
         {
-
+            string codeName="";
+            if (DateBirthDatePicker.SelectedDate.Value.Year>1900 && DateBirthDatePicker.SelectedDate.Value.Year < 1949)
+            {
+                codeName= codeName+"1";
+            }
+            if (DateBirthDatePicker.SelectedDate.Value.Year > 1950 && DateBirthDatePicker.SelectedDate.Value.Year < 1999)
+            {
+                codeName = codeName + "2";
+            }
+            if (DateBirthDatePicker.SelectedDate.Value.Year > 1800 && DateBirthDatePicker.SelectedDate.Value.Year < 1849)
+            {
+                codeName = codeName + "3";
+            }
         }
     }
 }
