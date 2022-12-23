@@ -76,6 +76,10 @@ namespace Ruminia
             {
                 codeName = codeName+ rnd.Next(7, 10);
             }
+            
+            string date =DateBirthDatePicker.SelectedDate.Value.Year.ToString();
+            codeName=codeName+date.Substring(2,2);
+            
             MessageBox.Show(codeName);
         }
     }
