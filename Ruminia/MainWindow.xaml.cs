@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,13 @@ namespace Ruminia
         {
             InitializeComponent();
             DateBirthDatePicker.SelectedDate = DateTime.Now;
+            string[] readText = File.ReadAllLines("Roman.csv");
+
+            foreach (string item in readText)
+            {
+                string country=item.Split(';')[2];
+                CityCombobox.Items.Add(country);
+            }
         }
 
         private void GenerationButton_Click(object sender, RoutedEventArgs e)
