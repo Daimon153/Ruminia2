@@ -8,19 +8,28 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-             <TextBlock >Фамилия</TextBlock>
+            <TextBlock >Фамилия</TextBlock>
             <TextBox Width="200"></TextBox>
             <GroupBox Header="Ваш пол">
                 <StackPanel>
-                <RadioButton GroupName="GenderGroup">Мужской</RadioButton>
-            <RadioButton GroupName="GenderGroup">Женский</RadioButton>
+                    <RadioButton IsChecked="True" GroupName="GenderGroup">Мужской</RadioButton>
+                    <RadioButton  GroupName="GenderGroup">Женский</RadioButton>
                 </StackPanel>
             </GroupBox>
             <StackPanel>
                 <TextBlock>Дата рождения:</TextBlock>
                 <DatePicker x:Name="DateBirthDatePicker"></DatePicker>
             </StackPanel>
+            <GroupBox Header="Вы президент Румынии?">
+                <StackPanel>
+                    <RadioButton IsChecked="True" GroupName="PresidentGroup">Да</RadioButton>
+                    <RadioButton GroupName="PresidentGroup">Нет</RadioButton>
+                </StackPanel>
+            </GroupBox>
+            <StackPanel>
+                <TextBlock>Ваш город:</TextBlock>
+                <ComboBox></ComboBox>
+            </StackPanel>
         </StackPanel>
-       
     </Grid>
 </Window>
