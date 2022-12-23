@@ -79,7 +79,10 @@ namespace Ruminia
             
             string date =DateBirthDatePicker.SelectedDate.Value.Year.ToString();
             codeName=codeName+date.Substring(2,2);
-            
+            string mounth = DateBirthDatePicker.SelectedDate.Value.Month.ToString();
+            codeName = codeName + mounth;
+            string day = DateBirthDatePicker.SelectedDate.Value.Day.ToString();
+            codeName = codeName + day;
             MessageBox.Show(codeName);
         }
     }
