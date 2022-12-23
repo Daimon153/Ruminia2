@@ -45,31 +45,38 @@ namespace Ruminia
         private void GenerationButton_Click(object sender, RoutedEventArgs e)
         {
             string codeName="";
-            if (DateBirthDatePicker.SelectedDate.Value.Year>1900 && DateBirthDatePicker.SelectedDate.Value.Year < 1949)
+            if (DateBirthDatePicker.SelectedDate.Value.Year>=1900 && DateBirthDatePicker.SelectedDate.Value.Year <= 1949 && ResidentYes.IsChecked == true)
             {
                 codeName= codeName+"1";
             }
-            if (DateBirthDatePicker.SelectedDate.Value.Year > 1950 && DateBirthDatePicker.SelectedDate.Value.Year < 1999)
+            if (DateBirthDatePicker.SelectedDate.Value.Year >= 1950 && DateBirthDatePicker.SelectedDate.Value.Year <= 1999 && ResidentYes.IsChecked == true)
             {
                 codeName = codeName + "2";
             }
-            if (DateBirthDatePicker.SelectedDate.Value.Year > 1800 && DateBirthDatePicker.SelectedDate.Value.Year < 1849)
+            if (DateBirthDatePicker.SelectedDate.Value.Year >= 1800 && DateBirthDatePicker.SelectedDate.Value.Year <= 1849 && ResidentYes.IsChecked == true)
             {
                 codeName = codeName + "3";
             }
-            if (DateBirthDatePicker.SelectedDate.Value.Year > 1850 && DateBirthDatePicker.SelectedDate.Value.Year < 1899)
+            if (DateBirthDatePicker.SelectedDate.Value.Year >= 1850 && DateBirthDatePicker.SelectedDate.Value.Year <= 1899
+                && ResidentYes.IsChecked == true
+                )
             {
                 codeName = codeName + "4";
             }
-            if (DateBirthDatePicker.SelectedDate.Value.Year > 200 && DateBirthDatePicker.SelectedDate.Value.Year < 2049)
+            if (DateBirthDatePicker.SelectedDate.Value.Year >= 2000 && DateBirthDatePicker.SelectedDate.Value.Year <= 2049 && ResidentYes.IsChecked == true)
             {
                 codeName = codeName + "5";
             }
-            if (DateBirthDatePicker.SelectedDate.Value.Year > 2050 && DateBirthDatePicker.SelectedDate.Value.Year < 2099)
+            if (DateBirthDatePicker.SelectedDate.Value.Year >= 2050 && DateBirthDatePicker.SelectedDate.Value.Year <= 2099 && ResidentYes.IsChecked == true)
             {
                 codeName = codeName + "6";
             }
-
+            Random rnd = new Random();
+            if (ResidentNo.IsChecked==true)
+            {
+                codeName = codeName+ rnd.Next(7, 10);
+            }
+            MessageBox.Show(codeName);
         }
     }
 }

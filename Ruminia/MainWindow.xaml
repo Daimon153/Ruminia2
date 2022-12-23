@@ -22,8 +22,8 @@
             </StackPanel>
             <GroupBox Header="Вы президент Румынии?">
                 <StackPanel>
-                    <RadioButton IsChecked="True" GroupName="PresidentGroup">Да</RadioButton>
-                    <RadioButton GroupName="PresidentGroup">Нет</RadioButton>
+                    <RadioButton IsChecked="True" GroupName="PresidentGroup" x:Name="ResidentYes">Да</RadioButton>
+                    <RadioButton GroupName="PresidentGroup" x:Name="ResidentNo">Нет</RadioButton>
                 </StackPanel>
             </GroupBox>
             <StackPanel>
