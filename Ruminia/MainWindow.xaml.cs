@@ -25,5 +25,10 @@ namespace Ruminia
             InitializeComponent();
             DateBirthDatePicker.SelectedDate = DateTime.Now;
         }
+
+        private void GenerationButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

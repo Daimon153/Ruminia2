@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock >Фамилия</TextBlock>
-            <TextBox Width="200"></TextBox>
+            <TextBox Width="200" x:Name="FamiliaText"></TextBox>
             <GroupBox Header="Ваш пол">
                 <StackPanel>
                     <RadioButton IsChecked="True" GroupName="GenderGroup">Мужской</RadioButton>
@@ -28,8 +28,9 @@
             </GroupBox>
             <StackPanel>
                 <TextBlock>Ваш город:</TextBlock>
-                <ComboBox></ComboBox>
+                <ComboBox x:Name="CityCombobox"></ComboBox>
             </StackPanel>
+            <Button x:Name="GenerationButton" Click="GenerationButton_Click">Сгенерировать CNP</Button>
         </StackPanel>
     </Grid>
 </Window>
