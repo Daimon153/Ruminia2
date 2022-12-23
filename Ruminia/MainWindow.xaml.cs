@@ -21,12 +21,14 @@ namespace Ruminia
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<string> data = new List<string>();
+        string codCity;
         public MainWindow()
         {
             InitializeComponent();
             DateBirthDatePicker.SelectedDate = DateTime.Now;
             string[] readText = File.ReadAllLines("Roman.csv");
-            List<string> data= new List<string>();
+            data= new List<string>();
 
             foreach (string item in readText)
             {
@@ -41,7 +43,12 @@ namespace Ruminia
             }
              
         }
-
+        
+private void CityCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int citiesIndex = CityCombobox.SelectedIndex;
+           codCity=data[citiesIndex].Split(';')[0];
+        }
         private void GenerationButton_Click(object sender, RoutedEventArgs e)
         {
             string codeName="";
@@ -83,7 +90,26 @@ namespace Ruminia
             codeName = codeName + mounth;
             string day = DateBirthDatePicker.SelectedDate.Value.Day.ToString();
             codeName = codeName + day;
+
+            codeName = codeName + codCity.ToString().PadLeft(2, '0');
+            if (ManTrue.IsChecked == true)
+            {
+                codeName = codeName + "1";
+            }
+            if (WomanTrue.IsChecked == true)
+            {
+                codeName = codeName + "2";
+            }
+            int ack = Convert.ToInt32(Convert.ToChar(FamiliaText.Text.Substring(0, 1)));
+            if (ack.ToString().Length==2)
+            {
+            
+            codeName = codeName + ack.ToString();
+            }
+           
             MessageBox.Show(codeName);
         }
+
+        
     }
 }
