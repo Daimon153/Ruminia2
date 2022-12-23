@@ -1,0 +1,26 @@
+﻿<Window x:Class="Ruminia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ruminia"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+             <TextBlock >Фамилия</TextBlock>
+            <TextBox Width="200"></TextBox>
+            <GroupBox Header="Ваш пол">
+                <StackPanel>
+                <RadioButton GroupName="GenderGroup">Мужской</RadioButton>
+            <RadioButton GroupName="GenderGroup">Женский</RadioButton>
+                </StackPanel>
+            </GroupBox>
+            <StackPanel>
+                <TextBlock>Дата рождения:</TextBlock>
+                <DatePicker x:Name="DateBirthDatePicker"></DatePicker>
+            </StackPanel>
+        </StackPanel>
+       
+    </Grid>
+</Window>
